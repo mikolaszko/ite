@@ -1,6 +1,6 @@
 # ITE
 
-ITE (isometric template editor) is aiming to be a simple isometric, pixel-art editor
+**ITE** (isometric template editor) is aiming to be a simple isometric, pixel-art editor
 
 Its not done yet and its in a heavy development stage
 
@@ -11,3 +11,4 @@ Its not done yet and its in a heavy development stage
 ## License
 
 Do what-ever-you-want MIT License
+
