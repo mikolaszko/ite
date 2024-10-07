@@ -14,8 +14,8 @@ static void ite_app_window_init(IteAppWindow *win) {
 }
 
 static void ite_app_window_class_init(IteAppWindowClass *class) {
-  gtk_widget_class_set_template_from_resource(GTK_WIDGET_CLASS(class),
-                                              "./ui/window.ui");
+  gtk_widget_class_set_template_from_resource(
+      GTK_WIDGET_CLASS(class), "/com/github/mikolaszko/ite/ui/window.ui");
 }
 
 IteAppWindow *ite_app_window_new(IteApp *app) {
