@@ -4,7 +4,7 @@ project('ite', 'c',
   default_options : ['warning_level=3'])
 
 executable('ite',
-           'ite.c',
+           'main.c', 'iteapp.c', 'iteappwin.c',
           dependencies: [ dependency('gtk4') ],
           install : true
           )
