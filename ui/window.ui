@@ -8,7 +8,11 @@
       <object class="GtkBox" id="content_box">
         <property name="orientation">vertical</property>
         <child>
-          <object class="GtkStack" id="stack"/>
+          <object class="GtkStack" id="stack">
+            <child>
+              <object class="GtkDrawingArea" />
+            </child>
+          </object>
         </child>
       </object>
     </child>

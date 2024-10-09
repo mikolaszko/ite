@@ -21,5 +21,26 @@ static void ite_app_window_class_init(IteAppWindowClass *class) {
 IteAppWindow *ite_app_window_new(IteApp *app) {
   return g_object_new(ITE_APP_WINDOW_TYPE, "application", app, NULL);
 }
+static void draw_function(GtkDrawingArea *area, cairo_t *cr, int width,
+                          int height, gpointer data) {
+  GdkRGBA color;
+  color.green = 1.0;
+  color.blue = 1.0;
+  color.red = 0.0;
+  color.alpha = 1.0;
 
-void ite_app_window_open(IteAppWindow *win, GFile *file) {}
+  cairo_arc(cr, width / 2.0, height / 2.0, MIN(width, height) / 2.0, 0,
+            2 * G_PI);
+
+  gdk_cairo_set_source_rgba(cr, &color);
+
+  cairo_fill(cr);
+}
+
+void ite_app_window_open(IteAppWindow *win) {
+  GtkWidget *area = gtk_drawing_area_new();
+  gtk_drawing_area_set_content_width(GTK_DRAWING_AREA(area), 500);
+  gtk_drawing_area_set_content_height(GTK_DRAWING_AREA(area), 500);
+  gtk_drawing_area_set_draw_func(GTK_DRAWING_AREA(area), draw_function, NULL,
+                                 NULL);
+}

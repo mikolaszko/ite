@@ -3,7 +3,6 @@
 
 cd ./build/
 echo "Meson compile"
-meson compile
 if [ $(echo $?) != 0 ]; then
 	echo "Compilation failed"
 	exit

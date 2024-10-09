@@ -22,16 +22,13 @@ static void ite_app_open(GApplication *app, GFile **files, int n_files,
                          const char *hint) {
   GList *windows;
   IteAppWindow *win;
-  int i;
 
   windows = gtk_application_get_windows(GTK_APPLICATION(app));
   if (windows)
     win = ITE_APP_WINDOW(windows->data);
   else
     win = ite_app_window_new(ITE_APP(app));
-
-  for (i = 0; i < n_files; i++)
-    ite_app_window_open(win, files[i]);
+  ite_app_window_open(win);
 
   gtk_window_present(GTK_WINDOW(win));
 }

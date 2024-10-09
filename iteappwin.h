@@ -8,4 +8,4 @@ G_DECLARE_FINAL_TYPE(IteAppWindow, ite_app_window, ITE, APP_WINDOW,
                      GtkApplicationWindow)
 
 IteAppWindow *ite_app_window_new(IteApp *app);
-void ite_app_window_open(IteAppWindow *win, GFile *file);
+void ite_app_window_open(IteAppWindow *win);
